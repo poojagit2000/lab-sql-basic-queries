@@ -1,0 +1,16 @@
+USE sakila;
+SHOW TABLES;
+SELECT * FROM actor;
+SELECT * FROM film;
+SELECT * FROM customer;
+SELECT title from film;
+SELECT name FROM language;
+SELECT FIRST_NAME FROM staff;
+SELECT DISTINCT release_year from film;
+SELECT COUNT(*) AS num_stores from store;
+SELECT COUNT(*) as num_emp FROM staff;
+SELECT DISTINCT LAST_NAME FROM actor;
+SELECT title,LENGTH FROM film order by length DESC limit 10;
+SELECT first_name from actor where first_name = "SCARLETT";
+SELECT film_id,title,length from film where title like "%ARMAGEDDON%" and length > 100;
+SELECT count(*) as behind_scenes from film where special_features like "%Behind the Scenes%";
